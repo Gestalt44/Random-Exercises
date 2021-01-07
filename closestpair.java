@@ -1,3 +1,8 @@
+/*Q 1.4.16 Closest pair (in one dimension). Write a program that, given an array a[] of N
+double values, finds a closest pair: two values whose difference is no greater than the
+the difference of any other pair (in absolute value). The running time of your program
+should be linearithmic in the worst case.*/
+
 import static java.lang.Math.*;
 import java.util.*;
 
@@ -19,17 +24,17 @@ class closestpair
 		
 		for(;i<a.length-1;i++)             // sorting imparts the property on the array that
 		{                                 // each element a is next to an element which is either equal or the smallest larger
-			diff=abs(a[i+1]-a[i]);       // integer than that element a, so the difference is the smallest possible number for a given number.
-			if(diff<smallest_diff)     // as index distance from an element increases, the difference between the element
-			{		                   // any element further along the array index, also becomes larger, largest difference being   
-				smallest_diff=diff;		// the difference between the first and the last elements
-				temp=i;	
+			diff=abs(a[i+1]-a[i]);    // integer than that element a, so the difference is the smallest possible number for a given number.
+			if(diff<smallest_diff)    // as index distance from an element increases, the difference between the element
+			{		          // any element further along the array index, also becomes larger, largest difference being the difference between the first and the last elements   
+			   smallest_diff=diff;		
+		           temp=i;	
 			}										
 		}
 		System.out.println("\nFor Array: " + Arrays.toString(a));
 		System.out.println("Smallest Difference: "+ smallest_diff+ " between the numbers:" + a[temp]+" and "+ a[temp+1] );										/*for(;i<a.length;i++)
 												
-		/* brute force method
+		/* brute force method,double loops
 		for(j=i+1;j<a.length;j++)
 		{
 		    diff=abs(a[j]-a[i]);
