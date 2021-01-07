@@ -32,7 +32,7 @@ class closestpair
 			}										
 		}
 		System.out.println("\nFor Array: " + Arrays.toString(a));
-		System.out.println("Smallest Difference: "+ smallest_diff+ " between the numbers:" + a[temp]+" and "+ a[temp+1] );										/*for(;i<a.length;i++)
+		System.out.println("Smallest Difference is "+ smallest_diff+ " between the numbers:" + a[temp]+" and "+ a[temp+1] );										/*for(;i<a.length;i++)
 												
 		/* brute force method,double loops
 		for(j=i+1;j<a.length;j++)
