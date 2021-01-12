@@ -1,3 +1,5 @@
+//checks emails for validity and throws exception otherwise
+
 import java.util.*;
 
 class emailformatexception extends RuntimeException
